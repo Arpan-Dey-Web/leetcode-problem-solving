@@ -5,7 +5,6 @@
 // increment() increases the current value by 1 and then returns it.
 // decrement() reduces the current value by 1 and then returns it.
 // reset() sets the current value to init and then returns it.
- 
 
 // Example 1:
 
@@ -27,7 +26,6 @@
 // counter.decrement(); // 1
 // counter.reset(); // 0
 // counter.reset(); // 0
- 
 
 // Constraints:
 
@@ -35,34 +33,26 @@
 // 0 <= calls.length <= 1000
 // calls[i] is one of "increment", "decrement" and "reset"
 
-
-
 const createCounter = function (init) {
-
   let currentValue = init;
 
   return {
-   
     increment: function () {
       currentValue++;
       return currentValue;
     },
 
-   
     decrement: function () {
       currentValue--;
       return currentValue;
     },
 
-   
     reset: function () {
       currentValue = init;
       return currentValue;
     },
   };
 };
-
-
 
 /**
  * const counter = createCounter(5)
