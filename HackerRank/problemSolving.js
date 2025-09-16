@@ -113,3 +113,55 @@ function getLetter(s) {
 }
 
 // console.log(getLetter("adfgt"));
+
+// function getSecondLargest(nums) {
+//   // Remove duplicates (so we don’t get the largest twice if repeated)
+//   let uniqueNums = [...new Set(nums)];
+//   console.log(uniqueNums);
+//   // Sort in descending order
+//   uniqueNums.sort((a, b) => b - a);
+
+//   // Second largest will be at index 1
+//   return uniqueNums[1];
+// }
+
+// console.log(getSecondLargest([5, 2, 3, 6, 6, 5])); // 5
+
+function getSecondLargest(nums) {
+  let largest = -Infinity;
+  let secondLargest = -Infinity;
+
+  for (let num of nums) {
+    if (num > largest) {
+      secondLargest = largest;
+      largest = num;
+    } else if (num > secondLargest && num < largest) {
+      secondLargest = num;
+    }
+  }
+
+  return secondLargest;
+}
+// console.log(getSecondLargest([5, 2, 3, 6, 6, 5])); // 5
+
+// function isPositive(a) {
+//   if (a === 0) {
+//     throw new error("Zero Error");
+//   } else if (a < 0) {
+//     throw new error("Negative Error");
+//   }
+//   else {
+//     return("YES")
+//   }
+// }
+// console.log(isPositive(0));
+
+function isPositive(a) {
+  if (a > 0) return "YES";
+  else if (a === 0) throw new Error("Zero Error");
+  else throw new Error("Negative Error");
+}
+
+
+
+console.log(isPositive(0));
