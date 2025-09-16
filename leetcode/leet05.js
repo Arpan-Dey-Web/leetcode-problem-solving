@@ -35,3 +35,40 @@ let map = function (arr, fn) {
   }
   return result;
 };
+
+
+
+function factorialNumber(num) {
+  if (num < 0) {
+    return "Factorial does not exist for negative numbers";
+  }
+  if (num ===0) {
+    return 1;
+  }
+  let output = 1;
+  for (let i = 1; i <= num; i++) {
+    output = output * i;
+  }
+
+  return output;
+}
+
+
+
+
+
+
+// Example usage:
+console.log(factorialNumber(5)); // Output: 120
+console.log(factorialNumber(0)); // Output: 1
+
+
+console.log(factorialNumber(4));
+
+// function factorial(num) {
+//   let result = 1;
+//   for (let x = 1; x < num + 1; x++) {
+//     result = result * x;
+//   }
+//   return result;
+// }
